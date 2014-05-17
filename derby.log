@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Tue May 13 16:02:53 MSK 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-0145-f576-c8c8-0000085e8bf8 
+on database directory E:\java\inetmagaz\magazin  with class loader WebAppClassLoader=Archetype Created Web Application@31272e01 
+Loaded from file:/C:/Users/timur/.m2/repository/org/apache/derby/derby/10.9.1.0/derby-10.9.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_25-b17
+user.dir=E:\java\inetmagaz
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

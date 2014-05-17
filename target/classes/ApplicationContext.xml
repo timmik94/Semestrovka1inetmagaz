@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+
+        <bean id="ItemDao" class="org.javalab.inetmagaz.dao.DerbyItemDao">
+            <constructor-arg name="dataSource" ref="dataSource"/>
+        </bean>
+        <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+            <property name="driver" ref="driver"/>
+            <property name="url" value="jdbc:derby:magazin;create=true"/>
+        </bean>
+        <bean id="ZakazDao" class="org.javalab.inetmagaz.dao.DerbyZakazDao">
+            <constructor-arg name="dataSource" ref="dataSource"/>
+        </bean>
+
+        <bean id="UserDao" class="org.javalab.inetmagaz.dao.DerbyUserDao">
+            <constructor-arg name="dataSource" ref="dataSource"/>
+        </bean>
+        <bean id="DaoFactory" class="org.javalab.inetmagaz.factory.DerbyDaoFactory"/>
+        <bean id="DaoFactoryBuilder" class="org.javalab.inetmagaz.factory.DaoFactoryBuilder"/>
+        <bean id="driver" class="org.apache.derby.jdbc.EmbeddedDriver"/>
+    </beans>
+
+</beans>
